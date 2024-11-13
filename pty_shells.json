@@ -6,5 +6,20 @@
   "perl": "perl -e 'exec \"/bin/sh\";'",
   "perl bash": "perl -e 'print `/bin/bash`'",
   "ruby": "ruby: exec \"/bin/sh\"",
-  "lua": "lua: os.execute('/bin/sh')"
+  "lua": "lua: os.execute('/bin/sh')",
+  "zsh": "/bin/zsh -i",
+  "php": "php -r 'system(\"/bin/sh\");'",
+  "nodejs": "node -e 'require(\"child_process\").spawn(\"/bin/sh\", {stdio: \"inherit\"});'",
+  "tcl": "tclsh -c 'exec /bin/sh'",
+  "expect": "expect -c 'spawn /bin/sh; interact'",
+  "ksh": "/bin/ksh -i",
+  "dash": "/bin/dash -i",
+  "go": "go run -e 'package main; import \"os/exec\"; func main() { exec.Command(\"/bin/sh\").Run() }'",
+  "viper": "viper run -e 'require(\"child_process\").spawn(\"/bin/sh\", {stdio: \"inherit\"});'",
+  "bash script": "bash -c '/bin/sh'",
+  "env": "env -i /bin/sh",
+  "sh script": "sh -c '/bin/sh'",
+  "awk": "awk 'BEGIN {system(\"/bin/sh\")}''",
+  "csh": "csh -i",
+  "fish": "fish -l"
 }
