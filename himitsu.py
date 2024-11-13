@@ -104,10 +104,8 @@ def generate_pty_shells(shell_type, pty_shells):
 def main():
     payloads = load_payloads()
     pty_shells = load_pty_shells()
-
     print(banner)
-
-    parser = argparse.ArgumentParser(description="Himitsu: Reverse Shell Generator for Lazy.")
+    parser = argparse.ArgumentParser(description="Himitsu: Reverse Shell Payload and PTY Shell Generator")
     parser.add_argument('-ip', '--ipaddress', type=str, help='Target IP address')
     parser.add_argument('-p', '--port', type=int, help='Target port number')
     parser.add_argument('-os', '--operating-system', type=str, help='Target operating system (linux, windows, macos)')
@@ -116,28 +114,22 @@ def main():
     parser.add_argument('-rlist', '--revlist', type=str, help='List available reverse shell payload types for the specified OS')
     parser.add_argument('-plist', '--ptylist', action='store_true', help='List all the available PTY shell types')
     parser.add_argument('-enc', '--encode', type=str, help='Encode the payload in Base64, URL, or other formats')
-
     args = parser.parse_args()
-
     if args.revlist:
         list_reverse_shells(args.revlist.lower())
         return
-
     if args.ptylist:
         list_pty_shells()
         return
-
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(1)
-
     if args.pty_shell:
         if args.ipaddress or args.port or args.operating_system or args.payload or args.encode:
             print("[-] PTY shell argument is not allowed with other options.")
             sys.exit(1)
         generate_pty_shells(args.pty_shell, pty_shells)
         return
-
     if args.ipaddress and args.port and args.operating_system and args.payload:
         generate_reverse_shells(
             ip=args.ipaddress, 
@@ -150,7 +142,6 @@ def main():
     else:
         print("[-] Missing required arguments. Please specify the IP address, port, operating system, and payload.")
         sys.exit(1)
-
 
 if __name__ == '__main__':
     main()
