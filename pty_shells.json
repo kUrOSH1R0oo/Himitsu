@@ -1,0 +1,10 @@
+{
+  "bash": "/bin/sh -i",
+  "python": "python3 -c 'import pty; pty.spawn(\"/bin/sh\")'",
+  "python bash": "python3 -c \"__import__('pty').spawn('/bin/bash')\"",
+  "python subprocess": "python3 -c \"__import__('subprocess').call(['/bin/bash'])\"",
+  "perl": "perl -e 'exec \"/bin/sh\";'",
+  "perl bash": "perl -e 'print `/bin/bash`'",
+  "ruby": "ruby: exec \"/bin/sh\"",
+  "lua": "lua: os.execute('/bin/sh')"
+}
