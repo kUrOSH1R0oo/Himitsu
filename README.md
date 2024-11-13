@@ -1,3 +1,5 @@
+![GIF](https://github.com/Kuraiyume/Himitsu/blob/main/crushy.gif)
+
 # Himitsu: Reverse Shell Payload and PTY Shell Generator
 
 Himitsu is a versatile reverse shell generator tool designed for generating payloads and PTY shells. It supports multiple encoding formats (Base64, URL encoding, etc.) and can generate payloads tailored to different operating systems like Linux, Windows, and macOS. The tool also provides options for listing available shell types and generating PTY shells for remote sessions.
