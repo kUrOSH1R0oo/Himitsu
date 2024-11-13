@@ -131,7 +131,6 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    # Check for conflicting arguments (pty with reverse shell arguments)
     if args.pty_shell:
         if args.ipaddress or args.port or args.operating_system or args.payload or args.encode:
             print("[-] PTY shell argument is not allowed with other options.")
@@ -139,7 +138,6 @@ def main():
         generate_pty_shells(args.pty_shell, pty_shells)
         return
 
-    # Check for missing arguments when generating reverse shells
     if args.ipaddress and args.port and args.operating_system and args.payload:
         generate_reverse_shells(
             ip=args.ipaddress, 
