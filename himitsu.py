@@ -18,7 +18,7 @@ banner = r"""
 \    Y    /  |  Y Y  \  ||  |  \___ \|  |  /
  \___|_  /|__|__|_|  /__||__| /____  >____/
        \/          \/              \/
-                                      ~A1SBERG
+                                      ~ Kuroshiro
 """
 
 def load_payloads():
