@@ -68,5 +68,5 @@ This tool is provided for educational and authorized penetration testing purpose
 This tool is provided as-is, without any warranty, express or implied. The creator is not responsible for any damages or consequences resulting from the use of this tool.
 
 ## Author
-- Kuraiyume (A1SBERG)
+- Kuroshiro (A1SBERG)
 
