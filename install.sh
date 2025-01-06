@@ -10,7 +10,7 @@ if [ ! -f "$SCRIPT_PATH" ]; then
     echo "[-] Error: The script '$SCRIPT_PATH' was not found."
     exit 1
 fi
-echo "[+] Copying '$SCRIPT_PATH' to '$DEST_DIR'"
+echo "[+] Moving '$SCRIPT_PATH' to '$DEST_DIR'"
 cp "$SCRIPT_PATH" "$DEST_SCRIPT"
 echo "[+] Setting execute permissions for '$DEST_SCRIPT'"
 chmod +x "$DEST_SCRIPT"
